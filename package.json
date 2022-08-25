@@ -9,9 +9,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "NODE_ENV=production npm-run-all start:*",
+    "docker:build": "docker build -t react .",
+    "docker:run": "docker run -d -p 3000:3000 --name react react",
+    "docker:stop": "docker rm -f react"
   }
 }
