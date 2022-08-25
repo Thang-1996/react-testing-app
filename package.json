@@ -9,7 +9,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "NODE_ENV=production npm-run-all start:*",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "docker:build": "docker build -t react .",
     "docker:run": "docker run -d -p 3000:3000 --name react react",
     "docker:stop": "docker rm -f react"
